@@ -8,7 +8,7 @@ RUN pip install --user -r requirements.txt
 COPY app/ .
 
 # Stage 2: Runtime
-FROM python:3.11-alpine
+FROM python:3.11-slim
 WORKDIR /app
 
 COPY --from=builder /root/.local /root/.local
